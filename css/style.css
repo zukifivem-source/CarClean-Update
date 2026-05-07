@@ -107,16 +107,22 @@ ul { list-style: none; }
   cursor: pointer;
   background: none;
   border: none;
-  padding: 4px;
+  padding: 6px;
+  z-index: 1100;
 }
 .navbar__toggle span {
   display: block;
-  width: 24px;
+  width: 26px;
   height: 2px;
   background: var(--white);
   border-radius: 2px;
-  transition: 0.3s;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  transform-origin: center;
 }
+.navbar__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar__toggle.is-open span:nth-child(2) { opacity: 0; }
+.navbar__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+body.nav-locked { overflow: hidden; }
 
 /* ========================================
    BUTTONS
@@ -624,8 +630,47 @@ footer {
 
 @media (max-width: 768px) {
   .navbar { padding: 0 20px; }
-  .navbar__links { display: none; }
   .navbar__toggle { display: flex; }
+
+  .navbar__links {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: rgba(26, 46, 90, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 18px 24px 28px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+  }
+  .navbar__links.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .navbar__links li {
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .navbar__links li:last-child { border-bottom: none; }
+  .navbar__links a {
+    display: block;
+    padding: 16px 4px;
+    font-size: 1rem;
+  }
+  .navbar__links .navbar__cta {
+    margin-top: 14px;
+    text-align: center;
+    border-radius: 50px;
+    padding: 14px 22px !important;
+  }
 
   section { padding: 60px 20px; }
   .page-hero { padding: 120px 20px 60px; }
@@ -771,6 +816,206 @@ body.page-exit {
   .hero-two-col > div:last-child { display: none; }
   .process-steps { grid-template-columns: repeat(2, 1fr) !important; }
   .process-steps > div:not(:last-child)::after { display: none !important; }
+}
+
+/* ========================================
+   FLOATING ACTIE KNOPPEN
+   ======================================== */
+.floating-actions {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+.floating-actions.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.fab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--white);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  white-space: nowrap;
+}
+.fab:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0,0,0,0.28); }
+.fab--whatsapp { background: #25d366; }
+.fab--book { background: var(--grad); }
+.fab__icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .floating-actions {
+    right: 12px;
+    bottom: 12px;
+    gap: 10px;
+  }
+  .fab { padding: 12px 18px; font-size: 0.88rem; }
+  .fab__icon { width: 20px; height: 20px; }
+}
+
+/* ========================================
+   TRUST LOGOS
+   ======================================== */
+.trust-strip {
+  background: var(--white);
+  padding: 36px 24px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.trust-strip__inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+.trust-strip__label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.trust-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  filter: grayscale(20%);
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+.trust-logo:hover { filter: none; transform: translateY(-2px); }
+.trust-logo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+.trust-logo span {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .trust-strip__inner { gap: 28px; }
+  .trust-logo img { height: 38px; }
+}
+
+/* ========================================
+   PHOTO GALLERY
+   ======================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 48px;
+}
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow);
+  background: linear-gradient(135deg, rgba(0,201,181,0.18), rgba(123,79,233,0.18));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-item__caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 14px 18px;
+  background: linear-gradient(to top, rgba(26,46,90,0.85), rgba(26,46,90,0));
+  color: var(--white);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.gallery-item--placeholder {
+  flex-direction: column;
+  gap: 10px;
+  color: var(--navy);
+  text-align: center;
+  padding: 24px;
+}
+.gallery-item--placeholder .icon { font-size: 2.4rem; }
+.gallery-item--placeholder .label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--navy);
+  opacity: 0.7;
+}
+.gallery-item--placeholder .sub {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: 1fr; gap: 14px; }
+}
+
+/* ========================================
+   DEALER LOGO ROW (over-ons)
+   ======================================== */
+.dealer-row {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.dealer-chip {
+  background: var(--white);
+  border: 1.5px solid rgba(26,127,212,0.15);
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: var(--navy);
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.dealer-chip::before {
+  content: '🏢';
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {

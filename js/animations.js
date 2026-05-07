@@ -1,5 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── 0. MOBIELE NAVIGATIE (HAMBURGER) ─────────────────────────────────
+  const navToggle = document.querySelector('.navbar__toggle');
+  const navLinks  = document.querySelector('.navbar__links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('nav-locked', open);
+    });
+    // Sluit het menu wanneer een link wordt aangeklikt
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        navToggle.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-locked');
+      });
+    });
+  }
+
   // ── 1. PAGINA FADE-TRANSITIE ──────────────────────────────────────────
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
@@ -25,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll(
-    '.card, .price-card, .review-card, .beblitz-section, .contact-item'
-  ).forEach((el, i) => {
+    '.card, .price-card, .review-card, .beblitz-section, .contact-item, .gallery-item, .trust-logo'
+  ).forEach((el) => {
     el.classList.add('reveal');
     const siblings = Array.from(el.parentElement.children);
     const idx = siblings.indexOf(el);
@@ -63,5 +84,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.6 });
 
   document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+  // ── 4. FLOATING ACTIE-KNOPPEN: VERSCHIJNEN BIJ SCROLL ────────────────
+  const fab = document.querySelector('.floating-actions');
+  if (fab) {
+    const showFab = () => {
+      if (window.scrollY > 240) fab.classList.add('is-visible');
+      else fab.classList.remove('is-visible');
+    };
+    showFab();
+    window.addEventListener('scroll', showFab, { passive: true });
+  }
 
 });
