@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afspraak maken — CarClean Midden Groningen</title>
+  <meta name="description" content="Maak online een afspraak bij CarClean Midden Groningen. Snel, eenvoudig en direct bevestigd." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAVIGATIE -->
+<nav class="navbar">
+  <div class="navbar__logo">
+    <img src="img/carclean%20no%20bg.png" alt="CarClean logo" class="navbar__logo-img" />
+    <div>CARCLEAN MIDDEN<span>Groningen</span></div>
+  </div>
+  <ul class="navbar__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="diensten.html">Diensten & Prijzen</a></li>
+    <li><a href="over-ons.html">Over ons</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="afspraak.html" class="navbar__cta">Afspraak maken</a></li>
+  </ul>
+  <button class="navbar__toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <span class="page-hero__tag">Snel & eenvoudig</span>
+  <h1>Maak een afspraak</h1>
+  <p>Voor alle diensten — wasstraat, handwas, wagenpark, vrachtwagens, boten of agrarisch. Vul het formulier in en wij nemen contact op.</p>
+</div>
+
+<!-- FORMULIER SECTIE -->
+<section id="formulier">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1.6fr; gap:56px; align-items:start;">
+
+      <!-- SIDEBAR INFO -->
+      <div>
+        <h3 style="font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:24px;">Wat kun je verwachten?</h3>
+
+        <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:36px;">
+          <div style="display:flex; align-items:center; gap:14px; background:var(--light); border-radius:10px; padding:16px;">
+            <span style="font-size:1.6rem;">1️⃣</span>
+            <div>
+              <p style="font-weight:600; color:var(--navy); font-size:0.92rem;">Formulier invullen</p>
+              <p style="color:var(--muted); font-size:0.82rem;">Kies je dienst en vul je gegevens in.</p>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; background:var(--light); border-radius:10px; padding:16px;">
+            <span style="font-size:1.6rem;">2️⃣</span>
+            <div>
+              <p style="font-weight:600; color:var(--navy); font-size:0.92rem;">Wij nemen contact op</p>
+              <p style="color:var(--muted); font-size:0.82rem;">Bevestiging binnen 1 uur (ma–vr).</p>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; background:var(--light); border-radius:10px; padding:16px;">
+            <span style="font-size:1.6rem;">3️⃣</span>
+            <div>
+              <p style="font-weight:600; color:var(--navy); font-size:0.92rem;">Jouw auto glint!</p>
+              <p style="color:var(--muted); font-size:0.82rem;">Klaar terwijl jij iets anders doet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--navy); border-radius:var(--radius); padding:24px; color:#fff;">
+          <p style="font-weight:700; font-size:1rem; margin-bottom:8px;">Liever bellen?</p>
+          <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin-bottom:12px;">Wij zijn bereikbaar van ma – vr: 08:00 – 17:00</p>
+          <p style="color:var(--teal); font-weight:700; font-size:1.05rem;">📞 0598 744 299</p>
+        </div>
+      </div>
+
+      <!-- BOOKING FORMULIER -->
+      <div style="background:var(--white); border-radius:var(--radius); padding:44px; box-shadow:var(--shadow-lg);">
+        <h3 style="font-size:1.35rem; font-weight:700; color:var(--navy); margin-bottom:28px;">Jouw afspraak</h3>
+        <form id="afspraakForm" name="afspraak" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="afspraak" />
+          <p style="display:none;">
+            <label>Niet invullen: <input name="bot-field" /></label>
+          </p>
+
+          <!-- PERSOONLIJKE GEGEVENS -->
+          <p style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin-bottom:16px; margin-top:4px;">Jouw gegevens</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="voornaam">Voornaam *</label>
+              <input type="text" id="voornaam" name="voornaam" placeholder="Jan" required />
+            </div>
+            <div class="form-group">
+              <label for="achternaam">Achternaam *</label>
+              <input type="text" id="achternaam" name="achternaam" placeholder="de Vries" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-mailadres *</label>
+              <input type="email" id="email" name="email" placeholder="jouw@email.nl" required />
+            </div>
+            <div class="form-group">
+              <label for="telefoon">Telefoonnummer *</label>
+              <input type="tel" id="telefoon" name="telefoon" placeholder="0598 744 299" required />
+            </div>
+          </div>
+
+          <!-- DIENST -->
+          <p style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin-bottom:16px; margin-top:8px;">Dienst & voertuig</p>
+          <div class="form-group">
+            <label for="doelgroep">Ik ben... *</label>
+            <select id="doelgroep" name="doelgroep" required>
+              <option value="" disabled selected>Kies een categorie</option>
+              <option value="particulier">Particulier</option>
+              <option value="dealer">Dealer</option>
+              <option value="wagenpark">Wagenpark / bedrijf</option>
+              <option value="vrachtwagen">Vrachtwagen / transport</option>
+              <option value="boot">Boot eigenaar</option>
+              <option value="agrarisch">Agrarisch</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dienst">Gewenste dienst *</label>
+            <select id="dienst" name="dienst" required>
+              <option value="" disabled selected>Kies een dienst</option>
+              <optgroup label="Autowasstraat">
+                <option value="wasstraat-brons">Wasstraat — Brons (€10,00)</option>
+                <option value="wasstraat-zilver">Wasstraat — Zilver (€13,50)</option>
+                <option value="wasstraat-goud">Wasstraat — Goud (€16,50)</option>
+                <option value="wasstraat-diamant">Wasstraat — Diamant (€19,50)</option>
+              </optgroup>
+              <optgroup label="Handwas / Detail">
+                <option value="basic-wash">Basic Wash — handwas (v.a. €14,95)</option>
+                <option value="complete-beurt">Complete Beurt — binnen &amp; buiten (v.a. €29,95)</option>
+                <option value="premium-detail">Premium Detail — volledig (v.a. €79,95)</option>
+              </optgroup>
+              <optgroup label="Detailing & Premium">
+                <option value="detailing-interieur">Detailing Interieur (v.a. €453,-)</option>
+                <option value="detailing-exterieur">Detailing Exterieur + Wax (€665,-)</option>
+                <option value="ceramische-coating">Ceramische Coating (v.a. €1.089,-)</option>
+                <option value="koplamp-polijsten">Koplamp polijsten (v.a. €60,50/stuk)</option>
+                <option value="velgen-coating">Velgen coating (v.a. €121,-/velg)</option>
+                <option value="ozon-behandeling">Ozon behandeling (€121,-)</option>
+                <option value="remklauwen-spuiten">Remklauwen spuiten (v.a. €544,50/set)</option>
+              </optgroup>
+              <optgroup label="Overige diensten">
+                <option value="dealer">Dealer / showroompakket</option>
+                <option value="wagenpark">Wagenpark / vloot</option>
+                <option value="vrachtwagen">Vrachtwagen / groot materieel</option>
+                <option value="boot">Boot / watervoertuig</option>
+                <option value="agrarisch">Agrarisch materieel</option>
+                <option value="offerte">Offerte op maat</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="voertuig">Voertuig / omschrijving *</label>
+            <input type="text" id="voertuig" name="voertuig" placeholder="bijv. VW Golf 2020, zwart" required />
+          </div>
+          <div class="form-group">
+            <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-weight:400;">
+              <input type="checkbox" id="haalbreng" name="haalbreng" value="ja" style="width:auto; margin-top:3px; accent-color:var(--teal);" />
+              <span>
+                <strong style="color:var(--navy);">Haal &amp; Breng service gewenst</strong><br />
+                <span style="color:var(--muted); font-size:0.85rem;">Wij halen jouw voertuig op met onze trailer en brengen het schoon terug. Vermeld je adres bij de opmerkingen.</span>
+              </span>
+            </label>
+          </div>
+
+          <!-- DATUM & TIJD -->
+          <p style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin-bottom:16px; margin-top:8px;">Voorkeur datum & tijd</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="datum">Gewenste datum *</label>
+              <input type="date" id="datum" name="datum" required />
+            </div>
+            <div class="form-group">
+              <label for="tijd">Voorkeur tijdstip</label>
+              <select id="tijd" name="tijd">
+                <option value="" disabled selected>Kies een tijdstip</option>
+                <option value="ochtend">Ochtend (08:00 – 12:00)</option>
+                <option value="middag">Middag (12:00 – 16:00)</option>
+                <option value="namiddag">Namiddag (16:00 – 17:00)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="opmerkingen">Opmerkingen</label>
+            <textarea id="opmerkingen" name="opmerkingen" placeholder="Bijzonderheden, extra wensen, locatie..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width:100%; font-size:1.05rem; padding:17px; margin-top:4px;">
+            Afspraak aanvragen →
+          </button>
+          <p style="color:var(--muted); font-size:0.8rem; margin-top:12px; text-align:center;">
+            Wij bevestigen jouw afspraak zo snel mogelijk — binnen 1 uur op werkdagen.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USP BAR -->
+<div class="usp-bar">
+  <div class="usp-bar__inner">
+    <div class="usp-bar__item">
+      <span class="usp-bar__icon">💰</span>
+      <div>
+        <strong>Goedkoopst</strong>
+        <span style="display:block;">in de regio</span>
+      </div>
+    </div>
+    <div class="usp-bar__item">
+      <span class="usp-bar__icon">⭐</span>
+      <div>
+        <strong>Topkwaliteit</strong>
+        <span style="display:block;">gegarandeerd</span>
+      </div>
+    </div>
+    <div class="usp-bar__item">
+      <span class="usp-bar__icon">⚡</span>
+      <div>
+        <strong>Snel klaar</strong>
+        <span style="display:block;">no-nonsense aanpak</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo">
+        <img src="img/carclean%20no%20bg.png" alt="CarClean logo" class="footer__logo-img" />
+        CARCLEAN MIDDEN <span>Groningen</span>
+      </div>
+      <p class="footer__desc">Professionele autoschoonmaak voor iedereen. Goedkoopst in de regio, altijd topkwaliteit.</p>
+      <p style="font-size:0.88rem; color:var(--teal); font-weight:600;">📞 0598 744 299</p>
+    </div>
+    <div>
+      <p class="footer__title">Navigatie</p>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="diensten.html">Diensten & Prijzen</a></li>
+        <li><a href="over-ons.html">Over ons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="afspraak.html">Afspraak maken</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__title">Diensten</p>
+      <ul class="footer__links">
+        <li><a href="diensten.html">Particulieren</a></li>
+        <li><a href="diensten.html">Dealers</a></li>
+        <li><a href="diensten.html">Wagenparken</a></li>
+        <li><a href="diensten.html">Vrachtwagens</a></li>
+        <li><a href="diensten.html">Boten</a></li>
+        <li><a href="diensten.html">Agrarisch</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 CarClean Midden Groningen. Alle rechten voorbehouden.</span>
+    <span>Actief in Hoogezand, Sappemeer & heel Midden Groningen</span>
+  </div>
+</footer>
+
+<script src="js/animations.js"></script>
+<script>
+  (function () {
+    var form = document.getElementById('afspraakForm');
+    if (!form) return;
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      var btn = form.querySelector('button[type="submit"]');
+      var origText = btn.textContent;
+      btn.textContent = 'Bezig met verzenden…';
+      btn.disabled = true;
+
+      try {
+        var res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(form)).toString()
+        });
+
+        if (res.ok) {
+          form.innerHTML =
+            '<div style="text-align:center;padding:48px 16px;">' +
+            '<div style="font-size:3rem;margin-bottom:16px;">✅</div>' +
+            '<h3 style="color:var(--navy);font-size:1.4rem;margin-bottom:12px;">Afspraak aangevraagd!</h3>' +
+            '<p style="color:var(--muted);max-width:360px;margin:0 auto;">We nemen zo snel mogelijk contact met je op — binnen 1 uur op werkdagen.</p>' +
+            '</div>';
+        } else {
+          throw new Error('server error');
+        }
+      } catch (err) {
+        btn.textContent = origText;
+        btn.disabled = false;
+        alert('Er is iets misgegaan. Probeer het opnieuw of bel ons op 0598 744 299.');
+      }
+    });
+  })();
+</script>
+</body>
+</html>

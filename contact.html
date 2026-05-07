@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — CarClean Midden Groningen</title>
+  <meta name="description" content="Neem contact op met CarClean Midden Groningen. Bel, mail of stuur een bericht. Actief in Hoogezand, Sappemeer en omgeving." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAVIGATIE -->
+<nav class="navbar">
+  <div class="navbar__logo">
+    <img src="img/carclean%20no%20bg.png" alt="CarClean logo" class="navbar__logo-img" />
+    <div>CARCLEAN MIDDEN<span>Groningen</span></div>
+  </div>
+  <ul class="navbar__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="diensten.html">Diensten & Prijzen</a></li>
+    <li><a href="over-ons.html">Over ons</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="afspraak.html" class="navbar__cta">Afspraak maken</a></li>
+  </ul>
+  <button class="navbar__toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <span class="page-hero__tag">Direct contact</span>
+  <h1>Neem contact op</h1>
+  <p>Vraag, offerte of gewoon even bellen? Wij reageren snel.</p>
+</div>
+
+<!-- CONTACT SECTIE -->
+<section>
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1.4fr; gap:64px; align-items:start;">
+
+      <!-- INFO -->
+      <div>
+        <h2 class="section-title" style="font-size:1.7rem; margin-bottom:36px;">Hoe kun je ons bereiken?</h2>
+
+        <div class="contact-item">
+          <div class="contact-item__icon">📞</div>
+          <div>
+            <p class="contact-item__label">Telefoon</p>
+            <p class="contact-item__value">0598 744 299</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item__icon">✉️</div>
+          <div>
+            <p class="contact-item__label">E-mail</p>
+            <p class="contact-item__value">info@carcleanmiddengroningen.nl</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item__icon">📍</div>
+          <div>
+            <p class="contact-item__label">Regio</p>
+            <p class="contact-item__value">Hoogezand / Sappemeer & omgeving</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item__icon">🕐</div>
+          <div>
+            <p class="contact-item__label">Openingstijden</p>
+            <p class="contact-item__value">Ma – Vr: 08:00 – 17:00</p>
+          </div>
+        </div>
+
+        <div style="background:var(--light); border-radius:var(--radius); padding:24px; margin-top:12px;">
+          <p style="font-weight:700; color:var(--navy); font-size:0.95rem; margin-bottom:8px;">⚡ Snelle reactie</p>
+          <p style="color:var(--muted); font-size:0.88rem;">Wij reageren doorgaans binnen 1 uur op berichten en e-mails tijdens openingstijden.</p>
+        </div>
+      </div>
+
+      <!-- FORMULIER -->
+      <div style="background:var(--white); border-radius:var(--radius); padding:44px; box-shadow:var(--shadow-lg);">
+        <h3 style="font-size:1.35rem; font-weight:700; color:var(--navy); margin-bottom:28px;">Stuur ons een bericht</h3>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/bedankt-contact">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none;">
+            <label>Niet invullen: <input name="bot-field" /></label>
+          </p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="voornaam">Voornaam *</label>
+              <input type="text" id="voornaam" name="voornaam" placeholder="Jan" required />
+            </div>
+            <div class="form-group">
+              <label for="achternaam">Achternaam *</label>
+              <input type="text" id="achternaam" name="achternaam" placeholder="de Vries" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mailadres *</label>
+            <input type="email" id="email" name="email" placeholder="jouw@email.nl" required />
+          </div>
+          <div class="form-group">
+            <label for="telefoon">Telefoonnummer</label>
+            <input type="tel" id="telefoon" name="telefoon" placeholder="0598 744 299" />
+          </div>
+          <div class="form-group">
+            <label for="onderwerp">Onderwerp *</label>
+            <select id="onderwerp" name="onderwerp" required>
+              <option value="" disabled selected>Kies een onderwerp</option>
+              <option value="offerte">Offerte aanvragen</option>
+              <option value="wagenpark">Wagenpark / contract</option>
+              <option value="vraag">Algemene vraag</option>
+              <option value="anders">Anders</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bericht">Bericht *</label>
+            <textarea id="bericht" name="bericht" placeholder="Vertel ons wat je nodig hebt..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width:100%; font-size:1rem; padding:15px;">
+            Verstuur bericht →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGIO -->
+<section class="section--light">
+  <div class="container" style="text-align:center;">
+    <span class="section-tag">Serviceregio</span>
+    <h2 class="section-title">Wij komen naar jou toe</h2>
+    <p class="section-sub" style="margin: 0 auto;">Actief in heel Midden Groningen en omgeving. Niet in de lijst? Neem gewoon contact op!</p>
+    <div class="regio-chips" style="justify-content:center; margin-top:28px;">
+      <span class="chip">Hoogezand</span>
+      <span class="chip">Sappemeer</span>
+      <span class="chip">Menterwolde</span>
+      <span class="chip">Veendam</span>
+      <span class="chip">Foxhol</span>
+      <span class="chip">Slochteren</span>
+      <span class="chip">Winschoten</span>
+      <span class="chip">Delfzijl</span>
+      <span class="chip">Stadskanaal</span>
+      <span class="chip">Zuidbroek</span>
+      <span class="chip">Scheemda</span>
+      <span class="chip">Groningen</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo">
+        <img src="img/carclean%20no%20bg.png" alt="CarClean logo" class="footer__logo-img" />
+        CARCLEAN MIDDEN <span>Groningen</span>
+      </div>
+      <p class="footer__desc">Professionele autoschoonmaak voor iedereen. Goedkoopst in de regio, altijd topkwaliteit.</p>
+      <p style="font-size:0.88rem; color:var(--teal); font-weight:600;">📞 0598 744 299</p>
+    </div>
+    <div>
+      <p class="footer__title">Navigatie</p>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="diensten.html">Diensten & Prijzen</a></li>
+        <li><a href="over-ons.html">Over ons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="afspraak.html">Afspraak maken</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__title">Diensten</p>
+      <ul class="footer__links">
+        <li><a href="diensten.html">Particulieren</a></li>
+        <li><a href="diensten.html">Dealers</a></li>
+        <li><a href="diensten.html">Wagenparken</a></li>
+        <li><a href="diensten.html">Vrachtwagens</a></li>
+        <li><a href="diensten.html">Boten</a></li>
+        <li><a href="diensten.html">Agrarisch</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 CarClean Midden Groningen. Alle rechten voorbehouden.</span>
+    <span>Actief in Hoogezand, Sappemeer & heel Midden Groningen</span>
+  </div>
+</footer>
+
+<script src="js/animations.js"></script>
+</body>
+</html>
