@@ -961,30 +961,6 @@ body.page-exit {
   font-size: 0.88rem;
   font-weight: 600;
 }
-.gallery-item--placeholder {
-  flex-direction: column;
-  gap: 10px;
-  color: var(--navy);
-  text-align: center;
-  padding: 24px;
-}
-.gallery-item--placeholder .icon { font-size: 2.4rem; }
-.gallery-item--placeholder .label {
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--navy);
-  opacity: 0.7;
-}
-.gallery-item--placeholder .sub {
-  font-size: 0.78rem;
-  color: var(--muted);
-  font-weight: 500;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
 @media (max-width: 1024px) {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
