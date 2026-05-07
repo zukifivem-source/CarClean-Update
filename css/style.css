@@ -862,14 +862,38 @@ body.page-exit {
   flex-shrink: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .floating-actions {
     right: 12px;
     bottom: 12px;
     gap: 10px;
+    flex-direction: column;
   }
-  .fab { padding: 12px 18px; font-size: 0.88rem; }
-  .fab__icon { width: 20px; height: 20px; }
+  .fab {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 0;
+    justify-content: center;
+  }
+  .fab__icon { width: 22px; height: 22px; margin: 0; }
+}
+
+/* ========================================
+   HERO BULLETS
+   ======================================== */
+.hero-bullets p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.hero-bullets p strong { color: #fff; font-weight: 700; }
+.hero-bullets__check {
+  display: inline-block;
+  color: var(--teal);
+  font-weight: 700;
+  margin-right: 8px;
 }
 
 /* ========================================
