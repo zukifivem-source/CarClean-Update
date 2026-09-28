@@ -3,261 +3,240 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Hulply — Minder handwerk, meer ruimte | Procesoptimalisatie voor het mkb</title>
-  <meta name="description" content="Hulply helpt mkb-bedrijven onnodig handwerk te schrappen. We brengen je processen in kaart, automatiseren wat niet door mensen hoeft en maken de besparing meetbaar. Start met een gratis procesScan.">
+  <title>Hulply — Procesoptimalisatie en automatisering voor het mkb</title>
+  <meta name="description" content="Hulply helpt mkb-bedrijven onnodig handwerk te schrappen. We brengen processen in kaart, automatiseren wat niet door mensen hoeft en maken de besparing meetbaar.">
   <link rel="canonical" href="https://hulply.nl/">
-  <meta name="theme-color" content="#0E1116">
+  <meta name="theme-color" content="#F6F4EF">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="nl_NL">
   <meta property="og:site_name" content="Hulply">
-  <meta property="og:title" content="Hulply — Minder handwerk, meer ruimte">
-  <meta property="og:description" content="Procesoptimalisatie en automatisering voor het mkb. We halen de knopen uit je werkprocessen, zodat je team uren terugwint.">
+  <meta property="og:title" content="Hulply — Minder handwerk, meer ruimte voor wat telt">
+  <meta property="og:description" content="Hulply helpt mkb-bedrijven onnodig handwerk te schrappen. We brengen processen in kaart, automatiseren wat niet door mensen hoeft en maken de besparing meetbaar.">
   <meta property="og:url" content="https://hulply.nl/">
   <meta property="og:image" content="https://hulply.nl/assets/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/film/poster.jpg" as="image" media="(min-width: 821px)">
-  <link rel="preload" href="assets/film/poster-mobile.jpg" as="image" media="(max-width: 820px)">
+  <link rel="preload" href="assets/fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Hulply",
-    "url": "https://hulply.nl/",
-    "logo": "https://hulply.nl/assets/logo-mark.svg",
-    "image": "https://hulply.nl/assets/og.jpg",
-    "description": "Procesoptimalisatie en automatisering voor het mkb.",
-    "areaServed": "NL",
-    "email": "info@hulply.nl",
-    "knowsLanguage": ["nl", "en"]
-  }
-  </script>
   <script src="main.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Naar de inhoud</a>
-
   <header class="header">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="Hulply, naar de homepage">
-        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#FF8A3D"/><path d="M10 40c7 0 11-4 11-10s-4-9-8-7-3 9 3 11 12 1 17-2 9-5 21-5" fill="none" stroke="#0E1116" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        hulply
-      </a>
-      <nav class="nav" aria-label="Hoofdmenu">
-        <a href="#diensten">Diensten</a>
-        <a href="#werkwijze">Werkwijze</a>
-        <a href="#faq">Vragen</a>
-        <a class="btn btn-primary" href="#contact">Gratis procesScan</a>
+      <a class="brand" href="index.html" aria-label="Hulply, naar de homepage"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16181D"/><path d="M11 39c6.5 0 10.5-3.8 10.5-9.4 0-4.6-3.6-7.6-7.2-6.1-3.8 1.6-2.4 8.5 3.1 10.4 5.2 1.8 11.4.4 16-2.4 4.6-2.8 8.6-4.3 19.6-4.3" fill="none" stroke="#F6F4EF" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="53" cy="27.2" r="3.6" fill="#C9521D"/></svg>hulply</a>
+      <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+      <nav class="nav" id="menu" aria-label="Hoofdmenu">
+        <a href="diensten.html">Diensten</a>
+        <a href="werkwijze.html">Werkwijze</a>
+        <a href="over-ons.html">Over ons</a>
+        <a href="veelgestelde-vragen.html">Vragen</a>
+        <a class="btn btn-primary" href="contact.html">Plan een kennismaking</a>
       </nav>
     </div>
   </header>
-
   <main id="main">
-    <!-- Scroll-film: de knoop ontwart terwijl je scrollt -->
-    <section class="scrub" aria-label="Zo werkt Hulply">
-      <div class="stage side-right" data-src="assets/film/film.mp4" data-src-mobile="assets/film/film-mobile.mp4" aria-hidden="true">
-        <picture>
-          <source media="(max-width: 820px)" srcset="assets/film/poster-mobile.jpg">
-          <img src="assets/film/poster.jpg" alt="" width="1920" height="1080" fetchpriority="high">
-        </picture>
-      </div>
-
-      <nav class="progress hidden" aria-label="Hoofdstukken">
-        <a href="#start" aria-label="Start"></a>
-        <a href="#probleem" aria-label="Het probleem"></a>
-        <a href="#ontrafelen" aria-label="Ontrafelen"></a>
-        <a href="#automatiseren" aria-label="Automatiseren"></a>
-        <a href="#resultaat" aria-label="Resultaat"></a>
-      </nav>
-
-      <div class="chapters">
-        <article class="chapter right" id="start">
-          <div class="wrap"><div class="copy">
-            <h1>Minder handwerk.<br><span class="accent">Meer ruimte.</span></h1>
-            <p>Hulply helpt mkb-bedrijven de knopen uit hun werkprocessen te halen. Zodat je team minder tijd kwijt is aan overtypen, zoeken en najagen, en meer tijd overhoudt voor klanten en groei.</p>
-            <div class="actions">
-              <a class="btn btn-primary" href="#contact">Plan een gratis procesScan
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <a class="btn btn-ghost" href="#probleem">Scroll en zie hoe het werkt</a>
-            </div>
-          </div></div>
-        </article>
-
-        <article class="chapter" id="probleem">
-          <div class="wrap"><div class="copy">
-            <h2>Werk dat niemand ziet, maar iedereen voelt.</h2>
-            <p>Gegevens die drie keer worden ingevoerd. Rapportages die elke week met de hand worden gemaakt. Mailtjes die blijven liggen. Het zijn kleine dingen, die samen elke week uren kosten.</p>
-            <div class="tags"><span class="tag">Dubbel invoerwerk</span><span class="tag">Losse Excel-lijsten</span><span class="tag">Zoeken in de mailbox</span></div>
-          </div></div>
-        </article>
-
-        <article class="chapter right" id="ontrafelen">
-          <div class="wrap"><div class="copy">
-            <h2>Eerst ontrafelen we hoe het werk <span class="accent">écht</span> loopt.</h2>
-            <p>We kijken mee met je team, brengen elke stap in kaart en laten zien waar tijd, geld en energie weglekken. Helder, zonder vakjargon.</p>
-            <div class="tags"><span class="tag">Interviews op de werkvloer</span><span class="tag">Procesplaat</span><span class="tag">Besparingsberekening</span></div>
-          </div></div>
-        </article>
-
-        <article class="chapter" id="automatiseren">
-          <div class="wrap"><div class="copy">
-            <h2>Dan automatiseren we wat niet door mensen hoeft.</h2>
-            <p>We koppelen de systemen die je al gebruikt, zetten slimme automatiseringen en AI in waar het echt iets oplevert, en leggen afspraken vast zodat het blijft werken.</p>
-            <div class="tags"><span class="tag">Koppelingen tussen systemen</span><span class="tag">Slimme workflows</span><span class="tag">AI waar het past</span></div>
-          </div></div>
-        </article>
-
-        <article class="chapter" id="resultaat">
-          <div class="wrap"><div class="copy">
-            <h2>Zodat alles weer <span class="accent">soepel stroomt.</span></h2>
-            <p>Minder fouten, minder stress, meer tijd voor het werk dat telt. En omdat we vooraf meten, zie je zwart op wit wat het oplevert.</p>
-            <div class="actions">
-              <a class="btn btn-primary" href="#contact">Ontdek wat jij kunt besparen</a>
-            </div>
-          </div></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="block" id="diensten">
-      <div class="wrap">
-        <span class="eyebrow">Diensten</span>
-        <h2>Van rommelig proces naar een strak geoliede machine.</h2>
-        <p class="lead">Je kunt klein beginnen met een scan, of ons het hele traject laten oppakken. Altijd praktisch, altijd met de focus op wat het je oplevert.</p>
-
-        <div class="grid-3">
-          <article class="card">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
-            <h3>ProcesScan</h3>
-            <p>We brengen in kaart hoe je belangrijkste processen nu lopen en waar de grootste tijdvreters zitten.</p>
-            <ul><li>Gesprekken met je team</li><li>Overzichtelijke procesplaat</li><li>Top verbeterkansen met geschatte besparing</li></ul>
-          </article>
-          <article class="card">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-            <h3>Automatisering</h3>
-            <p>We bouwen de verbeteringen: koppelingen, workflows, sjablonen en AI-toepassingen die het handwerk overnemen.</p>
-            <ul><li>Werkt met je bestaande software</li><li>Getest voordat het live gaat</li><li>Heldere documentatie</li></ul>
-          </article>
-          <article class="card">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/></svg></div>
-            <h3>Begeleiding</h3>
-            <p>We trainen je team, meten de resultaten en blijven verbeteren. Zo blijft de winst niet bij één project.</p>
-            <ul><li>Training en werkinstructies</li><li>Maandelijkse check-in</li><li>Meten wat het oplevert</li></ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="block" id="tijdvreters" style="padding-top:0">
-      <div class="wrap">
-        <span class="eyebrow">Herkenbaar?</span>
-        <h2>Hier lekt bij de meeste bedrijven tijd weg.</h2>
-        <div class="leaks">
-          <div class="leak"><div><h3>Facturen en administratie</h3><p>Uren overtypen uit mails, pdf's en werkbonnen naar je boekhoudpakket.</p></div><div class="hours">2–6 uur<small>per week</small></div></div>
-          <div class="leak"><div><h3>Planning en afspraken</h3><p>Heen-en-weer bellen en mailen, en roosters die handmatig worden bijgewerkt.</p></div><div class="hours">2–5 uur<small>per week</small></div></div>
-          <div class="leak"><div><h3>Rapportages</h3><p>Elke week of maand cijfers uit verschillende systemen bij elkaar zoeken.</p></div><div class="hours">1–4 uur<small>per week</small></div></div>
-          <div class="leak"><div><h3>Klantvragen</h3><p>Steeds dezelfde vragen beantwoorden en informatie opzoeken voor klanten.</p></div><div class="hours">2–8 uur<small>per week</small></div></div>
-        </div>
-        <p class="note">Indicatieve bandbreedtes per medewerker die dit werk doet. De werkelijke besparing verschilt per organisatie en brengen we tijdens de procesScan voor jouw situatie in kaart.</p>
-      </div>
-    </section>
-
-    <section class="block" id="werkwijze" style="background:var(--ink-2)">
-      <div class="wrap">
-        <span class="eyebrow">Werkwijze</span>
-        <h2>In vier heldere stappen.</h2>
-        <div class="steps">
-          <div class="step"><h3>Kennismaking</h3><p>Een gratis gesprek van 30 minuten. Waar loop je tegenaan en wat wil je bereiken?</p></div>
-          <div class="step"><h3>ProcesScan</h3><p>We brengen je processen in kaart en berekenen per verbeterkans wat het kan opleveren.</p></div>
-          <div class="step"><h3>Plan en bouwen</h3><p>Jij kiest wat we aanpakken. Wij bouwen, testen en zetten het live met duidelijke afspraken.</p></div>
-          <div class="step"><h3>Meten en borgen</h3><p>We trainen je team, meten de resultaten en sturen bij waar nodig.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="wrap why">
+    <section class="hero">
+      <div class="wrap hero-grid">
         <div>
-          <span class="eyebrow">Waarom Hulply</span>
-          <h2>Geen dikke rapporten. Wel resultaat.</h2>
-          <p class="lead">We zijn jong, hands-on en direct. Je werkt rechtstreeks met de mensen die het werk doen, zonder lagen ertussen.</p>
+          <p class="label">Procesoptimalisatie voor het mkb</p>
+          <h1 class="display">Minder handwerk. <em>Meer ruimte</em> voor wat telt.</h1>
+          <p class="lead">Hulply brengt in kaart waar in jouw organisatie tijd weglekt, en lost het op. Met slimmere afspraken, koppelingen tussen je systemen en automatisering waar het aantoonbaar iets oplevert.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="contact.html">Plan een kennismaking <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a class="link" href="werkwijze.html">Bekijk onze werkwijze <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+          <div class="hero-meta">
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>Kennismaking van 30 minuten, gratis</span>
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>Vaste prijs per stap</span>
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>Werkt met je huidige software</span>
+          </div>
         </div>
-        <div class="why-list">
-          <div class="why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><h3>Onafhankelijk advies</h3><p>We verkopen geen software. We kiezen wat bij jou past, en werken het liefst met wat je al hebt.</p></div></div>
-          <div class="why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><h3>Vooraf inzicht in de opbrengst</h3><p>Per verbeterkans laten we zien wat het naar verwachting kost en oplevert, zodat jij kunt kiezen.</p></div></div>
-          <div class="why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><h3>Vaste prijs per stap</h3><p>Geen open eindjes. Je weet vooraf waar je aan toe bent.</p></div></div>
-          <div class="why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><h3>Zorgvuldig met data</h3><p>We werken volgens de AVG en gaan vertrouwelijk om met jouw bedrijfsinformatie.</p></div></div>
-        </div>
+
+        <figure class="compare" aria-label="Voorbeeld van een proces voor en na optimalisatie">
+          <div class="compare-top"><strong>Offerteaanvraag verwerken</strong><span class="pill">Voorbeeld procesplaat</span></div>
+          <div class="compare-cols">
+            <div class="compare-col">
+              <h4><span>Nu</span><span>6 stappen</span></h4>
+              <ul class="steps-list">
+                <li class="manual">Aanvraag komt binnen per e-mail <span class="t">2 min</span></li>
+                <li class="manual">Gegevens overtypen in Excel <span class="t">8 min</span></li>
+                <li class="manual">Klant opzoeken in het CRM <span class="t">5 min</span></li>
+                <li class="manual">Offerte opstellen in Word <span class="t">20 min</span></li>
+                <li class="manual">Pdf maken en mailen <span class="t">4 min</span></li>
+                <li class="manual">Herinnering in agenda zetten <span class="t">3 min</span></li>
+              </ul>
+            </div>
+            <div class="compare-col after">
+              <h4><span>Na Hulply</span><span>3 stappen</span></h4>
+              <ul class="steps-list">
+                <li class="auto">Formulier vult CRM automatisch <span class="t">auto</span></li>
+                <li class="gone">Gegevens overtypen <span class="t">—</span></li>
+                <li class="gone">Klant opzoeken <span class="t">—</span></li>
+                <li class="manual">Offerte uit sjabloon controleren <span class="t">6 min</span></li>
+                <li class="manual">Versturen met één klik <span class="t">1 min</span></li>
+                <li class="auto">Opvolging automatisch ingepland <span class="t">auto</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="compare-total">
+            <div><span>Per aanvraag</span><b>42 min</b></div>
+            <div class="after"><span>Per aanvraag</span><b>7 min</b></div>
+          </div>
+          <figcaption class="compare-foot">Illustratief voorbeeld. Werkelijke tijden verschillen per organisatie en brengen we samen in kaart.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="block" id="faq" style="padding-top:0">
+    <section class="section tight" style="padding-top:0">
       <div class="wrap">
-        <span class="eyebrow">Veelgestelde vragen</span>
-        <h2>Goed om te weten.</h2>
-        <div class="faq">
-          <details><summary>Voor wat voor bedrijven werken jullie?</summary><p>Voor mkb-bedrijven, van ongeveer 5 tot 100 medewerkers, die merken dat er veel tijd opgaat aan handmatig en herhalend werk. De branche maakt weinig uit. Wel werken we uitsluitend voor bedrijven, niet voor particulieren.</p></details>
-          <details><summary>Wat kost het?</summary><p>Het kennismakingsgesprek is gratis. Daarna krijg je voor elke stap een offerte met een vaste prijs, zodat je vooraf weet waar je aan toe bent en zelf kunt kiezen wat je laat uitvoeren.</p></details>
-          <details><summary>Moeten we nieuwe software aanschaffen?</summary><p>Meestal niet. We beginnen met de systemen die je al gebruikt. Adviseren we toch een nieuw hulpmiddel, dan leggen we uit waarom en wat het kost, en beslis jij.</p></details>
-          <details><summary>Hoe zit het met onze gegevens en privacy?</summary><p>We gaan vertrouwelijk om met al je bedrijfsinformatie. Als we voor jou persoonsgegevens verwerken, sluiten we een verwerkersovereenkomst volgens de AVG.</p></details>
-          <details><summary>Kunnen jullie een besparing garanderen?</summary><p>We maken vooraf een zo goed mogelijke inschatting van de besparing, maar het uiteindelijke resultaat hangt ook af van hoe de verbeteringen binnen je organisatie worden gebruikt. Daarom meten we samen met jou wat het oplevert.</p></details>
-          <details><summary>Hoe snel kunnen we starten?</summary><p>Meestal kunnen we binnen twee weken na de kennismaking met de procesScan beginnen.</p></details>
+        <div class="facts">
+          <div class="fact"><b>30 min</b><span>Gratis en vrijblijvend kennismakingsgesprek</span></div>
+          <div class="fact"><b>Vaste prijs</b><span>Per stap, vooraf afgesproken. Geen open eindjes</span></div>
+          <div class="fact"><b>Onafhankelijk</b><span>We verkopen geen software of licenties</span></div>
+          <div class="fact"><b>AVG-proof</b><span>Vertrouwelijk, met verwerkersovereenkomst</span></div>
         </div>
       </div>
     </section>
 
-    <section class="block contact" id="contact">
-      <div class="wrap contact-grid">
-        <div>
-          <span class="eyebrow">Contact</span>
-          <h2>Ontdek waar jouw uren blijven.</h2>
-          <p class="lead">Plan een gratis en vrijblijvend gesprek van 30 minuten. Je hoort binnen twee werkdagen van ons.</p>
-          <div class="contact-points">
-            <a href="mailto:info@hulply.nl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>info@hulply.nl</a>
-            <a href="tel:[TELEFOONNUMMER]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>[TELEFOONNUMMER]</a>
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="label"><span class="n">01</span> Herkenbaar?</p>
+            <h2 class="h2">Waar in de meeste bedrijven <em>tijd weglekt</em>.</h2>
+          </div>
+          <p class="lead">Het zijn zelden grote problemen. Het zijn tientallen kleine handelingen die elke dag terugkomen, en die samen een flink deel van de werkweek kosten.</p>
+        </div>
+        <table class="table">
+          <thead><tr><th>Proces</th><th>Wat we vaak zien</th><th>Indicatie per week</th></tr></thead>
+          <tbody>
+            <tr><td>Administratie en facturatie</td><td>Gegevens uit mails, pdf's en werkbonnen worden met de hand overgenomen in het boekhoudpakket.</td><td class="num">2–6 uur</td></tr>
+            <tr><td>Planning en afspraken</td><td>Heen-en-weer mailen en bellen, en roosters die op meerdere plekken worden bijgehouden.</td><td class="num">2–5 uur</td></tr>
+            <tr><td>Rapportages</td><td>Elke week of maand cijfers uit verschillende systemen bij elkaar zoeken en in Excel zetten.</td><td class="num">1–4 uur</td></tr>
+            <tr><td>Klantvragen en opvolging</td><td>Steeds dezelfde vragen beantwoorden, informatie opzoeken en opvolging die tussen wal en schip valt.</td><td class="num">2–8 uur</td></tr>
+          </tbody>
+        </table>
+        <p class="small" style="margin-top:20px">Indicatieve bandbreedtes per medewerker die dit werk doet, geen garantie. Wat er in jouw situatie te winnen valt, brengen we in de ProcesScan in kaart.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="label"><span class="n">02</span> Diensten</p>
+            <h2 class="h2">Van inzicht tot een proces dat <em>vanzelf loopt</em>.</h2>
+          </div>
+          <p class="lead">Begin klein met een scan, of laat ons het hele traject oppakken. Je beslist per stap wat je laat uitvoeren.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <span class="num">i.</span>
+            <h3 class="h3">ProcesScan</h3>
+            <p>We brengen je belangrijkste processen in kaart en laten zien waar de grootste tijdvreters zitten, met per verbeterkans een onderbouwde besparing.</p>
+            <ul><li>Gesprekken met je team</li><li>Procesplaat van de huidige situatie</li><li>Verbeterplan met prioriteiten</li></ul>
+            <a class="link" href="diensten.html#processcan">Meer over de ProcesScan <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </article>
+          <article class="service">
+            <span class="num">ii.</span>
+            <h3 class="h3">Automatisering</h3>
+            <p>We bouwen de verbeteringen: koppelingen tussen je systemen, slimme workflows, sjablonen en AI-toepassingen die het handwerk overnemen.</p>
+            <ul><li>Met je bestaande software</li><li>Getest voordat het live gaat</li><li>Heldere documentatie</li></ul>
+            <a class="link" href="diensten.html#automatisering">Meer over automatisering <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </article>
+          <article class="service">
+            <span class="num">iii.</span>
+            <h3 class="h3">Begeleiding</h3>
+            <p>We trainen je team, meten wat de verbeteringen opleveren en sturen bij. Zo blijft de winst niet bij één project.</p>
+            <ul><li>Training en werkinstructies</li><li>Periodieke evaluatie</li><li>Doorlopende ondersteuning</li></ul>
+            <a class="link" href="diensten.html#begeleiding">Meer over begeleiding <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap split">
+        <div class="sticky">
+          <p class="label"><span class="n">03</span> Werkwijze</p>
+          <h2 class="h2" style="margin-top:20px">Eerst begrijpen, <em>dan</em> verbeteren.</h2>
+          <p class="lead" style="margin-top:20px">We beginnen niet bij tools, maar bij hoe het werk nu echt loopt. Pas als dat helder is, kiezen we de oplossing.</p>
+          <p style="margin-top:32px"><a class="link" href="werkwijze.html">Bekijk de volledige werkwijze <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></p>
+        </div>
+        <div class="phases">
+          <div class="phase"><span class="n">01</span><div><h3 class="h4">Kennismaking</h3><p>Een gratis gesprek van 30 minuten over waar je tegenaan loopt en wat je wilt bereiken.</p></div></div>
+          <div class="phase"><span class="n">02</span><div><h3 class="h4">ProcesScan</h3><p>We kijken mee op de werkvloer, brengen de processen in kaart en berekenen wat verbeteringen opleveren.</p></div></div>
+          <div class="phase"><span class="n">03</span><div><h3 class="h4">Bouwen en invoeren</h3><p>Jij kiest wat we aanpakken. Wij bouwen, testen en zetten het zorgvuldig live.</p></div></div>
+          <div class="phase"><span class="n">04</span><div><h3 class="h4">Meten en borgen</h3><p>We trainen je team, meten de resultaten en sturen bij waar dat nodig is.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="label" style="margin-bottom:28px">Ons uitgangspunt</p>
+        <p class="quote">We automatiseren niet om het automatiseren. Alleen wat aantoonbaar <em>tijd, geld of fouten</em> scheelt, en wat je team na afloop zelf kan blijven gebruiken.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2 class="h2">Benieuwd waar jouw <em>uren</em> blijven?</h2>
+            <p>Plan een vrijblijvend gesprek van 30 minuten. Je krijgt direct een eerste beeld van waar de grootste winst zit.</p>
+          </div>
+          <div class="actions">
+            <a class="btn btn-light" href="contact.html">Plan een kennismaking <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
           </div>
         </div>
-        <form id="contact-form" data-to="info@hulply.nl" novalidate>
-          <div class="row">
-            <label>Naam<input name="naam" autocomplete="name" required></label>
-            <label>Bedrijf<input name="bedrijf" autocomplete="organization"></label>
-          </div>
-          <div class="row">
-            <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
-            <label>Telefoon (optioneel)<input name="telefoon" type="tel" autocomplete="tel"></label>
-          </div>
-          <label>Aantal medewerkers
-            <select name="team"><option value="">Maak een keuze</option><option>1–5</option><option>6–20</option><option>21–50</option><option>51–100</option><option>Meer dan 100</option></select>
-          </label>
-          <label>Waar verlies je nu de meeste tijd aan?<textarea name="bericht" required></textarea></label>
-          <label class="check"><input type="checkbox" name="akkoord" required><span>Ik heb de <a href="privacy.html">privacyverklaring</a> gelezen en geef toestemming om contact met mij op te nemen over mijn aanvraag.</span></label>
-          <button class="btn btn-primary" type="submit">Verstuur aanvraag</button>
-          <p class="form-note">Na versturen opent je e-mailprogramma met een kant-en-klaar bericht.</p>
-        </form>
       </div>
     </section>
   </main>
-
-  <footer>
+  <footer class="footer">
     <div class="wrap">
-      <div class="foot">
-        <a class="brand" href="index.html" aria-label="Hulply">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#FF8A3D"/><path d="M10 40c7 0 11-4 11-10s-4-9-8-7-3 9 3 11 12 1 17-2 9-5 21-5" fill="none" stroke="#0E1116" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          hulply
-        </a>
-        <nav aria-label="Juridisch">
-          <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
-          <a href="privacy.html">Privacyverklaring</a>
-          <a href="cookies.html">Cookieverklaring</a>
-          <a href="disclaimer.html">Disclaimer</a>
-        </nav>
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Hulply"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#F6F4EF"/><path d="M11 39c6.5 0 10.5-3.8 10.5-9.4 0-4.6-3.6-7.6-7.2-6.1-3.8 1.6-2.4 8.5 3.1 10.4 5.2 1.8 11.4.4 16-2.4 4.6-2.8 8.6-4.3 19.6-4.3" fill="none" stroke="#16181D" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="53" cy="27.2" r="3.6" fill="#C9521D"/></svg>hulply</a>
+          <p>Procesoptimalisatie en automatisering voor het mkb. Minder handwerk, meer ruimte voor wat telt.</p>
+        </div>
+        <div>
+          <h4>Hulply</h4>
+          <ul>
+            <li><a href="diensten.html">Diensten</a></li>
+            <li><a href="werkwijze.html">Werkwijze</a></li>
+            <li><a href="over-ons.html">Over ons</a></li>
+            <li><a href="veelgestelde-vragen.html">Veelgestelde vragen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Juridisch</h4>
+          <ul>
+            <li><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></li>
+            <li><a href="privacy.html">Privacyverklaring</a></li>
+            <li><a href="cookies.html">Cookieverklaring</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@hulply.nl">info@hulply.nl</a></li>
+            <li><a href="tel:[TELEFOONNUMMER]">[TELEFOONNUMMER]</a></li>
+            <li>[ADRES]</li>
+          </ul>
+        </div>
       </div>
-      <p class="legal-line">© 2026 Hulply · Alle rechten voorbehouden<br>[RECHTSVORM + VOLLEDIGE NAAM] · [ADRES] · KvK [KVK-NUMMER] · btw-id [BTW-ID] · <a href="tel:[TELEFOONNUMMER]">[TELEFOONNUMMER]</a> · <a href="mailto:info@hulply.nl">info@hulply.nl</a></p>
+      <div class="foot-bottom">
+        <span>© 2026 Hulply. Alle rechten voorbehouden.</span>
+        <span>[RECHTSVORM + VOLLEDIGE NAAM] · KvK [KVK-NUMMER] · btw-id [BTW-ID]</span>
+      </div>
     </div>
   </footer>
 </body>

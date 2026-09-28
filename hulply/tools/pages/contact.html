@@ -1,0 +1,58 @@
+<!-- title: Contact -->
+<!-- desc: Plan een gratis kennismaking van 30 minuten met Hulply, of stel je vraag. We reageren binnen twee werkdagen. -->
+<!-- nav: contact -->
+<section class="page-hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / Contact</p>
+    <p class="label">Contact</p>
+    <h1 class="display">Laten we <em>kennismaken</em>.</h1>
+    <p class="lead">Vertel kort waar je tegenaan loopt. We nemen binnen twee werkdagen contact op om een gesprek van 30 minuten in te plannen. Gratis en vrijblijvend.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="label">Gegevens</p>
+      <div class="contact-list">
+        <a href="mailto:info@hulply.nl"><span>E-mail</span><b>info@hulply.nl</b></a>
+        <a href="tel:[TELEFOONNUMMER]"><span>Telefoon</span><b>[TELEFOONNUMMER]</b></a>
+        <div><span>Adres</span><b>[ADRES]</b></div>
+        <div><span>Bereikbaar</span><b>Maandag t/m vrijdag, 9.00–17.30 uur</b></div>
+      </div>
+      <div class="next-steps">
+        <p class="label">Wat gebeurt er daarna?</p>
+        <ol>
+          <li>We lezen je bericht en nemen binnen twee werkdagen contact op.</li>
+          <li>We plannen een kennismaking van 30 minuten, online of op locatie.</li>
+          <li>Je krijgt een eerste inschatting en, als het zinvol is, een voorstel met vaste prijs.</li>
+        </ol>
+      </div>
+    </div>
+
+    <form class="form" id="contact-form" data-to="info@hulply.nl" novalidate>
+      <div class="row">
+        <label class="field">Naam<input name="naam" autocomplete="name" required></label>
+        <label class="field">Bedrijf<input name="bedrijf" autocomplete="organization" required></label>
+      </div>
+      <div class="row">
+        <label class="field">E-mailadres<input name="email" type="email" autocomplete="email" required></label>
+        <label class="field">Telefoon <span class="opt">(optioneel)</span><input name="telefoon" type="tel" autocomplete="tel"></label>
+      </div>
+      <div class="row">
+        <label class="field">Aantal medewerkers
+          <select name="team"><option value="">Maak een keuze</option><option>1–5</option><option>6–20</option><option>21–50</option><option>51–100</option><option>Meer dan 100</option></select>
+        </label>
+        <label class="field">Interesse in
+          <select name="onderwerp"><option value="">Maak een keuze</option><option>Kennismaking</option><option>ProcesScan</option><option>Automatisering</option><option>Begeleiding</option><option>Iets anders</option></select>
+        </label>
+      </div>
+      <label class="field">Waar verlies je nu de meeste tijd aan?<textarea name="bericht" required placeholder="Bijvoorbeeld: we nemen elke week handmatig gegevens over uit ..."></textarea></label>
+      <label class="check"><input type="checkbox" name="akkoord" required><span>Ik ga akkoord met de verwerking van mijn gegevens om contact met mij op te nemen, zoals beschreven in de <a href="privacy.html">privacyverklaring</a>.</span></label>
+      <div class="form-foot">
+        <button class="btn btn-primary" type="submit">Verstuur aanvraag {{ARROW}}</button>
+        <span class="small">Je e-mailprogramma opent met een kant-en-klaar bericht.</span>
+      </div>
+    </form>
+  </div>
+</section>

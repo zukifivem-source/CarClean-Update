@@ -4,14 +4,15 @@ Statische website, zonder build-stap. Alles wat online moet staat in `public/`.
 
 ```
 public/            ← dit is de website (uploaden / koppelen aan hosting)
-  index.html         homepage met scroll-film
+  index.html, diensten.html, werkwijze.html, over-ons.html,
+  veelgestelde-vragen.html, contact.html            (pagina's)
   algemene-voorwaarden.html, privacy.html, cookies.html, disclaimer.html, 404.html
   styles.css, main.js
-  assets/            logo, favicon, fonts (lokaal, geen Google), film + posters, og.jpg
+  assets/            logo, favicon, lettertypen (lokaal, geen Google), og.jpg
   _headers           beveiligingsheaders (Cloudflare Pages / Netlify)
 tools/             ← bronbestanden, niet online zetten
-  *.body.html        teksten van de juridische pagina's
-  build_legal.py     zet de juridische pagina's om naar public/ (python3 tools/build_legal.py)
+  pages/*.html       inhoud van elke pagina (hier teksten aanpassen)
+  build.py           bouwt alle pagina's met dezelfde header/footer: python3 tools/build.py
   og.html, icon.html bron van de deelafbeelding en het app-icoon
 ```
 
@@ -26,11 +27,13 @@ Zoek in `public/` en `tools/` naar deze plaatshouders en vervang ze overal:
 | `[KVK-NUMMER]` | KVK-nummer |
 | `[BTW-ID]` | btw-identificatienummer (niet het omzetbelastingnummer) |
 | `[TELEFOONNUMMER]` | telefoonnummer (ook in `href="tel:..."`) |
+| `[NAAM 1]`, `[NAAM 2]`, `[N1]`, `[N2]`, `[ROL ...]` | teamleden en initialen op *Over ons* (`tools/pages/over-ons.html`) |
 
 Controleer ook:
 - `info@hulply.nl`: bestaat dit mailadres? Het contactformulier stuurt daarheen.
 - Algemene voorwaarden art. 10: aansprakelijkheid is gemaximeerd op € 10.000 per gebeurtenis / € 25.000 per jaar. Pas aan naar wens of naar je verzekering.
-- Na het aanpassen van teksten in `tools/*.body.html`: `python3 tools/build_legal.py`.
+- Na het aanpassen van teksten in `tools/pages/`: `python3 tools/build.py`.
+- Doorlooptijden (bv. ProcesScan 2 tot 3 weken) en de reactietermijn van twee werkdagen: pas aan als dat voor jullie anders is.
 
 > Deze juridische teksten zijn een zorgvuldige basis, maar geen juridisch advies. Laat ze bij voorkeur één keer nalezen door een jurist, zeker als jullie een beroepsaansprakelijkheidsverzekering afsluiten. Stuur de algemene voorwaarden altijd mee met je offertes (als pdf) en verwijs ernaar in de offerte, anders kun je er later lastiger een beroep op doen.
 
@@ -46,5 +49,5 @@ Netlify of Vercel werken ook: publiceer de map `public/`.
 
 ## Contactformulier
 
-Het formulier opent nu het e-mailprogramma van de bezoeker met een ingevuld bericht (er worden geen gegevens op de website opgeslagen).
+Het formulier op `contact.html` opent nu het e-mailprogramma van de bezoeker met een ingevuld bericht (er worden geen gegevens op de website opgeslagen).
 Wil je dat aanvragen direct binnenkomen zonder mailprogramma, koppel dan later een formulierdienst (bv. Formspree of Cloudflare Pages Functions) en werk de privacyverklaring bij.
