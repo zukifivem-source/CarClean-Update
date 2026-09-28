@@ -23,11 +23,11 @@ PAGE = """<!doctype html>
   <a class="skip" href="#main">Naar de inhoud</a>
   <header class="header scrolled">
     <div class="wrap">
-      <a class="brand" href="/" aria-label="Hulply, naar de homepage">{mark}hulply</a>
+      <a class="brand" href="index.html" aria-label="Hulply, naar de homepage">{mark}hulply</a>
       <nav class="nav" aria-label="Hoofdmenu">
-        <a href="/#diensten">Diensten</a>
-        <a href="/#werkwijze">Werkwijze</a>
-        <a class="btn btn-primary" href="/#contact">Gratis procesScan</a>
+        <a href="index.html#diensten">Diensten</a>
+        <a href="index.html#werkwijze">Werkwijze</a>
+        <a class="btn btn-primary" href="index.html#contact">Gratis procesScan</a>
       </nav>
     </div>
   </header>
@@ -41,7 +41,7 @@ PAGE = """<!doctype html>
   <footer>
     <div class="wrap">
       <div class="foot">
-        <a class="brand" href="/" aria-label="Hulply">{mark}hulply</a>
+        <a class="brand" href="index.html" aria-label="Hulply">{mark}hulply</a>
         <nav aria-label="Juridisch">
           <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
           <a href="privacy.html">Privacyverklaring</a>

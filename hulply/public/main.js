@@ -73,7 +73,14 @@
         video.addEventListener("seeked", () => stage.classList.add("ready"), { once: true });
       }, { once: true });
     } catch (err) {
-      if (err.name !== "AbortError") currentSrc = null; // poster blijft staan
+      if (err.name === "AbortError") return;
+      // Fallback (bv. lokaal geopend via file://): bron direct op de video zetten
+      video.src = src;
+      video.addEventListener("loadeddata", () => {
+        seek();
+        video.addEventListener("seeked", () => stage.classList.add("ready"), { once: true });
+      }, { once: true });
+      video.addEventListener("error", () => { currentSrc = null; }, { once: true }); // poster blijft staan
     }
   };
 
