@@ -1,6 +1,6 @@
 # Notities voor Claude: websites bouwen voor klanten
 
-De eigenaar van deze repo bouwt websites voor lokale ondernemers en verkoopt ze. Hij praat Nederlands; antwoord in het Nederlands.
+De eigenaar van deze repo bouwt websites voor lokale ondernemers en verkoopt ze. Communicatie in het Nederlands; antwoord in het Nederlands.
 
 ## Wat er in deze repo staat
 - **Root (`index.html`, `diensten.html`, …):** de CarClean-site (autopoetsbedrijf). Niet aanpassen tenzij daarom gevraagd wordt.
