@@ -2,6 +2,8 @@
 
 Static site (HTML, CSS, vanilla JS). No build step. Hosted on Netlify.
 
+Open `index.html` directly to preview it locally: all links are relative, so it works without a server.
+
 ## Deploy on Netlify
 1. New site from this repo.
 2. Base directory: `fudail-clothes` · Publish directory: `fudail-clothes` · Build command: empty.
