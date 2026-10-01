@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /bedankt-contact.html
+Disallow: /bedankt/
 
 Sitemap: https://carcleanmiddengroningen.nl/sitemap.xml
