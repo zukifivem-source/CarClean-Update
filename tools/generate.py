@@ -30,7 +30,7 @@ def eur(n):
 
 def i(name, cls=""):
     c = f' class="i {cls}"' if cls else ' class="i"'
-    return f'<svg{c} aria-hidden="true" focusable="false"><use href="/img/icons.svg#{name}"></use></svg>'
+    return f'<svg{c} aria-hidden="true" focusable="false"><use href="#i-{name}"></use></svg>'
 
 
 ARROW = i("arrow", "icon-arrow")
@@ -417,7 +417,37 @@ def gallery(tag="h2"):
 """
 
 
+def _sprite():
+    """Inline the icon sprite so icons also work when a page is opened straight from disk."""
+    import re
+    svg = open(os.path.join(ROOT, "img", "icons.svg"), encoding="utf-8").read()
+    body = re.sub(r"<!--.*?-->", "", svg.split(">", 1)[1].rsplit("</svg>", 1)[0], flags=re.S)
+    body = body.replace('<symbol id="', '<symbol id="i-')
+    return '<svg xmlns="http://www.w3.org/2000/svg" class="sprite" width="0" height="0" aria-hidden="true" focusable="false">' + " ".join(body.split()) + "</svg>"
+
+
+SPRITE = None
+
+
+def relativize(html, depth):
+    """Turn root paths (/css/...) into relative ones (../css/...) so pages work from disk too.
+    Absolute URLs (https://...), canonical/og tags and the Netlify form action stay untouched."""
+    import re
+    p = "../" * depth
+    home = p or "./"
+    html = re.sub(r'(href|src)="/(?=["#?])', lambda m: f'{m.group(1)}="{home}', html)
+    html = re.sub(r'(href|src)="/(?!/)', lambda m: f'{m.group(1)}="{p}', html)
+    html = re.sub(r'((?:image)?srcset)="([^"]*)"', lambda m: m.group(1) + '="' + re.sub(r'(^|,\s*)/', lambda n: n.group(1) + p, m.group(2)) + '"', html)
+    return html
+
+
 def write(path, html):
+    global SPRITE
+    if SPRITE is None:
+        SPRITE = _sprite()
+    html = html.replace("<body>\n", "<body>\n" + SPRITE + "\n", 1)
+    if path != "404.html":  # Netlify serves 404.html at any depth, so it keeps root paths
+        html = relativize(html, path.count("/"))
     full = os.path.join(ROOT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     with open(full, "w", encoding="utf-8") as f:

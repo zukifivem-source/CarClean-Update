@@ -158,7 +158,7 @@
       linesEl.innerHTML = html;
       var q = '?dienst=' + encodeURIComponent(pkg ? pkg.value : '');
       if (extras.length) q += '&extra=' + encodeURIComponent(extras.map(function (e) { return e.value; }).join(','));
-      linkEl.setAttribute('href', '/afspraak/' + q);
+      linkEl.setAttribute('href', linkEl.getAttribute('href').split('?')[0] + q);
     };
     calc.addEventListener('change', update);
     calc.addEventListener('submit', function (e) { e.preventDefault(); });
@@ -303,6 +303,22 @@
     }
   }
 
-  /* 11. Footer year -------------------------------------------------------- */
+  /* 11. Opened straight from disk (file://): folders don't auto-open index.html */
+  if (location.protocol === 'file:') {
+    var css = $('link[rel="stylesheet"][href$="style.css"]');
+    if (css) {
+      var embed = d.createElement('link');
+      embed.rel = 'stylesheet';
+      embed.href = css.getAttribute('href').replace('style.css', 'font-embed.css');
+      d.head.appendChild(embed);
+    }
+    $$('a[href]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (/^[a-z]+:/i.test(href) || href.charAt(0) === '#') return;
+      a.setAttribute('href', href.replace(/^([^?#]*\/)(?=[?#]|$)/, '$1index.html'));
+    });
+  }
+
+  /* 12. Footer year -------------------------------------------------------- */
   $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();

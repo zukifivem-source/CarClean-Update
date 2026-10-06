@@ -90,8 +90,8 @@
 /* 2. FONT & RESET ========================================================== */
 @font-face {
   font-family: "Archivo";
-  src: url("/fonts/archivo-var.woff2") format("woff2-variations"),
-       url("/fonts/archivo-var.woff2") format("woff2");
+  src: url("../fonts/archivo-var.woff2") format("woff2-variations"),
+       url("../fonts/archivo-var.woff2") format("woff2");
   font-weight: 100 900;
   font-stretch: 62% 125%;
   font-style: normal;
@@ -120,6 +120,7 @@ body {
   padding-bottom: 4.5rem; /* room for the mobile action bar */
 }
 img, svg, picture, video { display: block; max-width: 100%; height: auto; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 .i { width: 1.2em; height: 1.2em; flex: none; display: inline-block; vertical-align: -.2em; }
 h1, h2, h3 { overflow-wrap: break-word; }
 input, button, textarea, select { font: inherit; color: inherit; }
@@ -553,7 +554,7 @@ body.menu-open { overflow: hidden; }
   padding-block: var(--s-6) var(--s-8);
 }
 .hero__content { display: grid; gap: var(--s-5); align-content: center; }
-.hero h1 { font-size: clamp(2.25rem, .75rem + 6.2vw, 4.85rem); }
+.hero h1 { font-size: clamp(2.25rem, .75rem + 6.2vw, 4.4rem); }
 .hero h1 .kicker {
   display: block; margin-bottom: var(--s-4);
   font-size: var(--step--1); font-stretch: var(--narrow); font-weight: 650;
